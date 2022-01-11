@@ -61,8 +61,6 @@ public class FloodFill {
         floodFill(image, i, j + 1, oldColor, newColor);
         floodFill(image, i, j - 1, oldColor, newColor);
 
-
-
     }
 
 }

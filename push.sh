@@ -1,3 +1,3 @@
 git add * 
-git commit -m "Bit Strings"
+git commit -m "Palindrome reorder"
 git push

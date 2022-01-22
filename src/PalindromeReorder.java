@@ -1,6 +1,7 @@
 public class PalindromeReorder {
     public static void main(String[] args) {
         palindromeRedorder("ahfdha");
+        System.out.println(2 & 5);
     }
 
     /**

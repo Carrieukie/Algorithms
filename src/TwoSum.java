@@ -27,21 +27,22 @@ import java.util.HashSet;
  */
 public class TwoSum {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(twoSum(new int[]{-1,0}, -1)));
+        System.out.println(Arrays.toString(twoSum(new int[]{3,5,-4,8,11,1,-1,6}, 10)));
     }
 
     public static int[] twoSum(int[] nums, int target) {
-        int ans[] = new int[2];
+        int[] ans = new int[2];
 
-        HashMap<Integer,Integer> numIndex = new HashMap<>();
+        HashSet<Integer> companions = new HashSet<>();
 
         for (int i = 0 ; i < nums.length ; i++){
-            if (numIndex.containsKey(nums[i])){
-                ans[0] = numIndex.get(nums[i]);
-                ans[1] = i;
+            int companion = target - nums[i];
+            if (companions.contains(nums[i])){
+                ans[0] = companion;
+                ans[1] = nums[i];
                 return ans;
             }else {
-                numIndex.put(target - nums[i],i);
+                companions.add(companion);
             }
         }
         return ans;

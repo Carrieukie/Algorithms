@@ -29,7 +29,7 @@ import java.util.HashMap;
 
 public class TwoSum2 {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(twoSum2(new int[]{1,2,3,4}, 6)));
+        System.out.println(Arrays.toString(twoSum(new int[]{3,5,-4,8,11,1,-1,6}, 10)));
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -39,8 +39,8 @@ public class TwoSum2 {
 
         for (int i = 0; i < nums.length; i++) {
             if (numIndex.containsKey(nums[i])) {
-                ans[0] = numIndex.get(nums[i]);
-                ans[1] = i + 1;
+                ans[0] = nums[i];
+                ans[1] = nums[i + 1];
                 return ans;
             } else {
                 numIndex.put(target - nums[i], i + 1);
@@ -58,6 +58,7 @@ public class TwoSum2 {
 
         while (sum != target) {
             sum = nums[left] + nums[right];
+
             if (sum > target) {
                 sum -= nums[right--];
                 sum += nums[right];

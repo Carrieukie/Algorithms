@@ -27,7 +27,7 @@ import java.util.HashSet;
  */
 public class TwoSum {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(twoSum(new int[]{3,5,-4,8,11,1,-1,6}, 10)));
+        System.out.println(Arrays.toString(twoSum(new int[]{0,10,3,5,-4,8,11,1,-1,6,14}, 10)));
     }
 
     public static int[] twoSum(int[] nums, int target) {
@@ -37,15 +37,15 @@ public class TwoSum {
 
         for (int i = 0 ; i < nums.length ; i++){
             int companion = target - nums[i];
+
             if (companions.contains(nums[i])){
                 ans[0] = companion;
                 ans[1] = nums[i];
-                return ans;
             }else {
                 companions.add(companion);
             }
         }
+
         return ans;
     }
-
-    }
+}

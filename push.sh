@@ -1,3 +1,3 @@
 git add * 
-git commit -m "More Challenges"
+git commit -m "Quora Challenge"
 git push

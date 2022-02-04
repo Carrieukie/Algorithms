@@ -88,7 +88,7 @@ import java.util.*;
  * 1 3
  */
 
-public class digest {
+public class Quora {
     public static void main(String args[]) {
 
         Scanner sc = new Scanner(System.in);
